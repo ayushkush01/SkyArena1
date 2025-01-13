@@ -1,0 +1,118 @@
+<div class="booking-container">
+  <h2 class="booking-title">Hotel Booking Form</h2>
+  
+  <form (ngSubmit)="onSubmit()" #bookingForm="ngForm">
+    <!-- Full Name -->
+    <div class="form-group">
+      <label for="fullName">Full Name</label>
+      <input 
+        type="text" 
+        id="fullName" 
+        class="form-control" 
+        placeholder="Enter your full name" 
+        [(ngModel)]="fullName" 
+        name="fullName" 
+        required
+      />
+    </div>
+
+    <!-- Email -->
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input 
+        type="email" 
+        id="email" 
+        class="form-control" 
+        placeholder="Enter your email" 
+        [(ngModel)]="email" 
+        name="email" 
+        required
+      />
+    </div>
+
+    <!-- Phone Number -->
+    <div class="form-group">
+      <label for="phoneNumber">Phone Number</label>
+      <input 
+        type="text" 
+        id="phoneNumber" 
+        class="form-control" 
+        placeholder="Enter your phone number" 
+        [(ngModel)]="phoneNumber" 
+        name="phoneNumber" 
+        required
+      />
+    </div>
+
+    <!-- Check-in Date -->
+    <div class="form-group">
+      <label for="checkIn">Check-in Date</label>
+      <input 
+        type="date" 
+        id="checkIn" 
+        class="form-control" 
+        [(ngModel)]="checkIn" 
+        name="checkIn" 
+        required
+      />
+    </div>
+
+    <!-- Check-out Date -->
+    <div class="form-group">
+      <label for="checkOut">Check-out Date</label>
+      <input 
+        type="date" 
+        id="checkOut" 
+        class="form-control" 
+        [(ngModel)]="checkOut" 
+        name="checkOut" 
+        required
+      />
+    </div>
+
+    <!-- Number of Guests -->
+    <div class="form-group">
+      <label for="guests">Number of Guests</label>
+      <input 
+        type="number" 
+        id="guests" 
+        class="form-control" 
+        placeholder="Enter number of guests" 
+        [(ngModel)]="guests" 
+        name="guests" 
+        min="1" 
+        required
+      />
+    </div>
+
+    <!-- Room Type -->
+    <div class="form-group">
+      <label for="roomType">Room Type</label>
+      <select 
+        id="roomType" 
+        class="form-control" 
+        [(ngModel)]="roomType" 
+        name="roomType" 
+        required
+      >
+        <option value="deluxe">Deluxe Room</option>
+        <option value="standard">Standard Room</option>
+        <option value="luxury">Luxury Suite</option>
+        <option value="budget">Budget Room</option>
+        <option value="family">Family Room</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="!bookingForm.valid">Book Now</button>
+  </form>
+
+  <!-- Success Modal -->
+  <div *ngIf="formSubmitted" class="success-modal">
+    <div class="modal-content">
+      <h3>Booking Successful!</h3>
+      <p>Thank you for booking, {{ fullName }}. Your room is reserved.</p>
+      <p>A confirmation email has been sent to {{ email }}.</p>
+      <button class="btn btn-close" (click)="closeModal()" [routerLink]="['/']">Close</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,108 @@
+/* Background for the whole page */
+
+/* Room container styles */
+.room-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.9); /* Add semi-transparent background */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow for more contrast */
+}
+
+/* Section title styling */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  font-weight: bold;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for better contrast */
+}
+
+/* Room cards layout */
+.room-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+/* Individual room card styling */
+.room-card {
+  width: 18%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+/* Hover effect on room cards */
+.room-card:hover {
+  transform: translateY(-10px); /* Slight lift effect when hovering */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Image styling for room cards */
+.room-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Room info section */
+.room-info {
+  padding: 20px;
+}
+
+/* Room title */
+.room-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Room price styling */
+.room-price {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #007bff;
+  margin: 10px 0;
+}
+
+/* Facilities list */
+.room-facilities {
+  list-style-type: none;
+  padding: 0;
+}
+
+.room-facilities li {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Book Now button styling */
+.btn-book {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 15px;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Button hover effect */
+.btn-book:hover {
+  background-color: #0056b3;
+}
+
+/* Optional: If you want the section to have rounded corners */
+.room-container {
+  border-radius: 15px;
+}

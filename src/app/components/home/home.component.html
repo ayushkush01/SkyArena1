@@ -1,0 +1,112 @@
+<div class="room-container" style="position: relative;">
+  <h2 class="section-title">Our Rooms</h2>
+  
+ <!-- Logout Button -->
+<button 
+style="position: absolute; top: 10px; right: 10px; padding: 10px 20px; background-color: #d23333; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;" 
+[routerLink]="['/login']">
+Logout
+</button>
+
+<!-- Restaurant Button -->
+<button 
+style="position: absolute; top: 10px; right: 130px; padding: 10px 20px; background-color: #688bd7; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;" 
+[routerLink]="['/restro']">
+Restaurant
+</button>
+
+<!-- Services Button -->
+<button 
+style="position: absolute; top: 10px; right: 260px; padding: 10px 20px; background-color: #688bd7; color: rgb(255, 255, 255); border: none; border-radius: 5px; font-size: 16px; font-weight: bold; cursor: pointer; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);" 
+[routerLink]="['/servs']">
+Services
+</button>
+
+
+  <br>
+  
+
+  <div class="room-cards">
+    <!-- Room 1 -->
+    <div class="room-card">
+      <img src="assets/images/c1.avif" alt="Deluxe Room" class="room-image"/>
+      <div class="room-info">
+        <h3 class="room-title">Deluxe Room</h3>
+        <p class="room-price">$120 / night</p>
+        <ul class="room-facilities">
+          <li>Free Wi-Fi</li>
+          <li>King Size Bed</li>
+          <li>Ocean View</li>
+          <li>Air Conditioning</li>
+        </ul>
+        <button class="btn btn-book" [routerLink]="['/book']">Book Now</button>
+      </div>
+    </div>
+
+    <!-- Room 2 -->
+    <div class="room-card">
+      <img src="assets/images/c2.avif" alt="Standard Room" class="room-image"/>
+      <div class="room-info">
+        <h3 class="room-title">Standard Room</h3>
+        <p class="room-price">$80 / night</p>
+        <ul class="room-facilities">
+          <li>Free Wi-Fi</li>
+          <li>Queen Size Bed</li>
+          <li>City View</li>
+          <li>Air Conditioning</li>
+        </ul>
+        <button class="btn btn-book">Book Now</button>
+      </div>
+    </div>
+
+    <!-- Room 3 -->
+    <div class="room-card">
+      <img src="assets/images/c6.avif" alt="Luxury Suite" class="room-image"/>
+      <div class="room-info">
+        <h3 class="room-title">Luxury Suite</h3>
+        <p class="room-price">$250 / night</p>
+        <ul class="room-facilities">
+          <li>Free Wi-Fi</li>
+          <li>Jacuzzi</li>
+          <li>Ocean View</li>
+          <li>King Size Bed</li>
+          <li>Private Balcony</li>
+        </ul>
+        <button class="btn btn-book">Book Now</button>
+      </div>
+    </div>
+
+    <!-- Room 4 -->
+    <div class="room-card">
+      <img src="assets/images/c4.avif" alt="Budget Room" class="room-image"/>
+      <div class="room-info">
+        <h3 class="room-title">Budget Room</h3>
+        <p class="room-price">$50 / night</p>
+        <ul class="room-facilities">
+          <li>Free Wi-Fi</li>
+          <li>Single Bed</li>
+          <li>City View</li>
+        </ul>
+        <button class="btn btn-book">Book Now</button>
+      </div>
+    </div>
+
+    <!-- Room 5 -->
+    <div class="room-card">
+      <img src="assets/images/c1.avif" alt="Family Room" class="room-image"/>
+      <div class="room-info">
+        <h3 class="room-title">Family Room</h3>
+        <p class="room-price">$180 / night</p>
+        <ul class="room-facilities">
+          <li>Free Wi-Fi</li>
+          <li>Two Queen Size Beds</li>
+          <li>Mountain View</li>
+          <li>Air Conditioning</li>
+        </ul>
+        <button class="btn btn-book">Book Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-booking-list></app-booking-list>

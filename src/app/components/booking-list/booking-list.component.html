@@ -1,0 +1,35 @@
+<div class="grid-view-section">
+  <div class="container">
+    <h2 class="section-title">Booked Rooms</h2>
+    <div class="grid-container">
+      <table class="table table-bordered table-hover table-striped">
+        <thead class="table-dark">
+          <tr>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Check-In</th>
+            <th>Check-Out</th>
+            <th>Guests</th>
+            <th>Room Type</th>
+            <th>Checkout</th> <!-- Checkout Button -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let booking of bookings">
+            <td>{{ booking.fullName }}</td>
+            <td>{{ booking.email }}</td>
+            <td>{{ booking.phoneNumber }}</td>
+            <td>{{ booking.checkIn }}</td>
+            <td>{{ booking.checkOut }}</td>
+            <td>{{ booking.guests }}</td>
+            <td>{{ booking.roomType }}</td>
+            <td>
+              <button class="btn btn-primary" (click)="checkout(booking)">Checkout</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

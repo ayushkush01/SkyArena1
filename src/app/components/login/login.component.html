@@ -1,0 +1,50 @@
+<div class="log">
+  <div class="login-container">
+    <div class="hotel-name">
+      <h1>Sky Arena</h1>
+    </div>
+
+    <div class="login-box">
+      <h2>Hotel Admin Login</h2>
+
+      <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+        <div class="form-group">
+          <label for="username"><i class="fa fa-user"></i> Username</label>
+          <input 
+            type="text" 
+            id="username" 
+            class="form-control" 
+            placeholder="Enter Username" 
+            [(ngModel)]="username" 
+            name="username" 
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="password"><i class="fa fa-lock"></i> Password</label>
+          <input 
+            type="password" 
+            id="password" 
+            class="form-control" 
+            placeholder="Enter Password" 
+            [(ngModel)]="password" 
+            name="password" 
+            required
+          />
+        </div>
+
+        <button 
+          type="submit" 
+          class="btn-submit" 
+          [disabled]="!loginForm.valid">
+          Login
+        </button>
+
+        <div *ngIf="loginFailed" class="error-message">
+          Invalid username or password. Please try again.
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
